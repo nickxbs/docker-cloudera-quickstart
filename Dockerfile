@@ -1,7 +1,7 @@
 # VERSION   0.1
 
 FROM ubuntu:14.04
-MAINTAINER Caio Quirino <caioquirino@caioquirino.com.br>
+MAINTAINER Nicol <febbrari@gmail.com>
 
 ADD docker_files/cdh_installer.sh /tmp/cdh_installer.sh
 ADD docker_files/install_cloudera_repositories.sh /tmp/install_cloudera_repositories.sh
@@ -53,3 +53,4 @@ EXPOSE 7077:7077
 #CMD ["/usr/bin/cdh_startup_script.sh && bash"]
 #CMD ["bash /usr/bin/cdh_startup_script.sh && bash"]
 CMD ["cdh_startup_script.sh"]
+COPY INPUT /home/cloudera/
